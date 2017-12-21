@@ -4,21 +4,28 @@ console.log("-----------");
 
 //Assignment 1
 //Filter Method
-var filterNames = names.filter(function(names){
-    return names.length <= 3;
+var filterNames = names.filter(function(name){
+    return name.length <= 3;
 }
 )
 console.log("Filtered Names:")
 console.log("Filter Method: " + filterNames);
 
 //Map Method
-var mappedNames = names.map(function(names){
-    return names.toUpperCase();
+var mappedNames = names.map(function(name){
+    return name.toUpperCase();
 })
 console.log("---------")
 console.log("Mapped Names:")
 console.log("Map Method: " + mappedNames);
 console.log("---------")
+
+//Reduce - not part of assignment
+//Reducde
+
+var reduced = names.reduce( (prev, curr) => prev +', '+ curr )
+
+console.log("reduce:" +reduced);
 
 //Assignment 2
 //Custom Filter & Map

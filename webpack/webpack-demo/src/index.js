@@ -36,9 +36,9 @@ function makeTable(persons, sport) {
       if (person.favoriteSport == sport) {
         table += "<tr>";
         //The ECMAScript2016 way, instead of using lodash
-        Object.keys(person).map((e) => table += "<td>" + person[e] + "<\td>");
+        Object.keys(person).map((e) => table += "<td>" + person[e] + "</td>");
 
-        table += "<\tr>";
+        table += "</tr>";
       }
 
     }, this);
@@ -61,9 +61,9 @@ function makeTable(persons, sport) {
     persons.forEach(function (person) {
       table += "<tr>";
       //The ECMAScript2016 way, instead of using lodash
-      Object.keys(person).map((e) => table += "<td>" + person[e] + "<\td>");
+      Object.keys(person).map((e) => table += "<td>" + person[e] + "</td>");
 
-      table += "<\tr>";
+      table += "</tr>";
     }, this);
 
     table += "</tbody></table>";

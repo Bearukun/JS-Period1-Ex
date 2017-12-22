@@ -189,7 +189,7 @@ console.log("Ex8:")
 //ES6(2015) syntax not supported by NodeJS without tranpiling with bable
 //import * as fFunc from "./myModule/fModule.js";
 
-//Old way of importing
+//Old (nodejs) way of importing
 var fFunc = require("./myModule/fModule")
 
 console.log(fFunc.f(5, 2, true, 2, "hello World", [1, 2, 3], new Date(), {}));

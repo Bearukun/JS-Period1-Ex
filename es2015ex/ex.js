@@ -43,15 +43,15 @@ let evens = [2, 4, 6, 8, 10];
 //a2 
 //This works because it's not block-scoped like the other example. So it will 
 //return the v + 1 statement.
-odds = evens.map(v => v + 1)
+var odds = evens.map(v => v + 1)
 
 //workaround
 var odds2 = evens.map(v => {
     return v + 1
 });
 
-pairs = evens.map(v => ({ even: v, odd: v + 1 }))
-nums = evens.map((v, i) => v + i)
+var pairs = evens.map(v => ({ even: v, odd: v + 1 }))
+var nums = evens.map((v, i) => v + i)
 
 console.log("Odds: " + odds + " - Pairs: " + pairs + " - Nums" + nums);
 console.log(odds2);
@@ -62,7 +62,7 @@ console.log(odds2);
 //A
 
 //The ES5 way
-function NumbersES5(numbs) {
+/* function NumbersES5(numbs) {
     var self = this;
     this.nums = numbs;
     this.fives = [];
@@ -73,7 +73,7 @@ function NumbersES5(numbs) {
     });
 }
 var numbersEs5 = new NumbersES5([1, 3, 5, 10, 14, 20, 33, 50]);
-console.log(numbersEs5.fives);
+console.log(numbersEs5.fives); */
 
 
 //The ES2015 (ES6) way
@@ -92,7 +92,7 @@ console.log(numbers.fives);
 
 
 //B
-console.log("B\n")
+console.log("B:")
 /* var counter = {
     count: 0,
     inc: function () {
@@ -102,9 +102,8 @@ console.log("B\n")
 
 var counter = {
     count: 0,
-    inc: () => {
-        console.log("Hej");
-        this.count++;
+    inc: (count) => { 
+        count+1;
     }
 }
 var func = counter.inc; //Store "reference" to inc
@@ -147,7 +146,8 @@ var restParams = [...rest];
 //console.log(f(5,2,...restParams));
 
 //C
-console.log(chars = [...f(5, 2, ...restParams)]);
+var chars = [...f(5, 2, ...restParams)];
+console.log(chars);
 
 
 /* ex-6 */
@@ -160,13 +160,14 @@ let user = {
 
 
 /* ex-7 */
-
+console.log("Ex7:")
+console.log("A:")
 //A - Array Matching
 let fName = "Kurt", lName = "Wonnegut";
 console.log(`First: ${fName}, Last: ${lName}`);
 [fname, lName] = [lName, fName];
 console.log(`First: ${fName}, Last: ${lName}`);
-
+console.log("B")
 //B - Shorthand Notation
 function getPerson() {
     return {
@@ -184,10 +185,14 @@ console.log(lastName + " " + phone);
 
 
 /* ex-8 */
-
+console.log("Ex8:")
+//ES6(2015) syntax not supported by NodeJS without tranpiling with bable
 //import * as fFunc from "./myModule/fModule.js";
 
-//console.log(fFunc.f(5, 2, true, 2, "hello World", [1, 2, 3], new Date(), {}));
+//Old way of importing
+var fFunc = require("./myModule/fModule")
+
+console.log(fFunc.f(5, 2, true, 2, "hello World", [1, 2, 3], new Date(), {}));
 
 
 /* ex-8 */

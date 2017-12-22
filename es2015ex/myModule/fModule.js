@@ -1,4 +1,4 @@
-export function f(...args) {
+function f(...args) {
     let returnString = "";
     returnString += `Sum: ${args.length}`;
     for (var index = 0; index < args.length; index++) {
@@ -6,3 +6,5 @@ export function f(...args) {
     }
     return returnString;
 }
+
+module.exports.f = f;

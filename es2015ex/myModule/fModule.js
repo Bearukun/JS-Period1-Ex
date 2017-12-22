@@ -1,4 +1,4 @@
-function f(...args) {
+/* ES2015 way: export */function f(...args) {
     let returnString = "";
     returnString += `Sum: ${args.length}`;
     for (var index = 0; index < args.length; index++) {
